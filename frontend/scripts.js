@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", carregarCulturas);
 
 function carregarCulturas() {
-    fetch('http://localhost:3000/culturas')
+    fetch('http://localhost:3001/culturas')
         .then(response => response.json())
         .then(culturas => {
             const dropdown = document.getElementById('culturaAnterior');
@@ -24,7 +24,7 @@ function buscarSugestoes() {
       return;
   }
 
-  const url = `http://localhost:3000/recomendacao/${culturaId}`;
+  const url = `http://localhost:3001/recomendacao/${culturaId}`;
   
   fetch(url)
       .then(response => response.json())
@@ -61,7 +61,7 @@ const modalText = document.getElementById("modal-text");
 const closeModal = document.getElementsByClassName("close")[0];
 
 function openModal(culturaId) {
-  fetch(`http://localhost:3000/dicas/${culturaId}`)
+  fetch(`http://localhost:3001/dicas/${culturaId}`)
       .then(response => response.json())
       .then(data => {
           if (data.length > 0) {

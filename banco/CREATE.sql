@@ -2,6 +2,7 @@ DROP DATABASE rotacao_culturas;
 CREATE DATABASE rotacao_culturas;
 USE rotacao_culturas;
 
+
 CREATE TABLE culturas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(20) NOT NULL
